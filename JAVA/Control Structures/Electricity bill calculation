@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class Main{
+    
+    public static void main(String[] args){
+        
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the units consumed");
+       double units=sc.nextDouble();
+       if(units<=20){
+           System.out.println("No charge");
+       }
+       else if(units>20 && units<100){
+           units=3.5*units;
+           System.out.println("You have to pay Rs."+units);
+       }
+       else if(units>=100){
+           units=5*units;
+           System.out.println("You have to pay Rs."+units);
+       }
+        //Fill the code here
+    }
+    
+}
