@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        int number;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the cost of the mobile");
+        number = scan.nextInt();
+	    if(number <= 13000)
+        {
+            System.out.println("Mobile chosen is within the budget");
+        }
+	    else
+        {
+            System.out.println("Mobile chosen is beyond the budget");
+        }
+    }
+}
