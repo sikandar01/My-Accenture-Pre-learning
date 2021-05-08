@@ -1,0 +1,30 @@
+import java.util.Scanner;
+ 
+ public class Main {
+ 
+  public static void main(String[] args){
+   Scanner sc=new Scanner(System.in);
+   int l,m,cnt=0,g;
+  System.out.println("Enter starting range");
+   l=sc.nextInt();
+  System.out.println("Enter ending range");
+   m=sc.nextInt();
+   for(int i=l;i<=m;i++){
+       if(i==1 || i==0){
+           continue;
+      }
+       g=1;
+       for(int j=2;j<=i/2;++j){
+          if(i%j==0){
+               g=0;
+               break;
+           }
+      }
+       if(g==1){
+          cnt++;
+       }
+   }
+   System.out.println(cnt);
+  }
+
+}
