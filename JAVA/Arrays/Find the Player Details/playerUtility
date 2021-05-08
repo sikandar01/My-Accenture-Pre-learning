@@ -1,0 +1,18 @@
+
+public class PlayerUtility {
+
+	public Player findPlayerDetailsById(Player[] arr, int playerIdToSearch){
+	int i;
+	for(i=0;i<4;i++){
+	    if(arr[i].getPlayerId()==playerIdToSearch){
+	        return arr[i];
+	    }
+	}
+	
+	    return null;
+	//Fill the code here
+		
+	}
+	
+	
+}
