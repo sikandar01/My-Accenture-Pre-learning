@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		Player[] pObj=new Player[4];
+		pObj[0]=new Player(146,"Athul",16,9876543210l);
+		pObj[1]=new Player(135,"Rakshana",16,9956231045l);
+		pObj[2]=new Player(168,"Christy",16,9856471230l);
+		pObj[3]=new Player(194,"Athulya",16,9768541230l);
+		System.out.println("Enter the id to be searched");
+		int id=sc.nextInt();
+		PlayerUtility obj=new PlayerUtility();
+		Player[] O=new Player[1];
+		O[0]=obj.findPlayerDetailsById(pObj,id);
+		if(O[0]!=null){
+		System.out.print("Name:"+O[0].getPlayerName()+"\n");
+		System.out.print("Phone number:"+O[0].getPhoneNumber());
+		// Invoke the method findPlayerDetailsById in the PlayerUtility class and display results
+		}
+		else{
+		    System.out.print("No player found");
+		}
+	}
+	
+}
