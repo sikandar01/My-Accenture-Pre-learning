@@ -1,0 +1,22 @@
+    import java.util.*;
+import java.text.*;
+public class Main {
+    
+    public static void main(String[] args) {
+        
+Scanner sc=new Scanner(System.in);
+     DateFormat sdf=new SimpleDateFormat("dd/MM/yy");
+     sdf.setLenient(false);
+     String d=sc.nextLine();
+     try{
+         sdf.parse(d);
+         System.out.println(d+" is a valid date");
+     }catch(ParseException e){
+         System.out.println(d+" is not a valid date");
+         
+     }
+  }
+    
+}
+    
+
