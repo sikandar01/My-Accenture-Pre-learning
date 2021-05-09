@@ -1,0 +1,49 @@
+    import java.util.*;
+import java.util.regex.*;
+class OccurrenceOfChar
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a word:");
+        String word=sc.nextLine();
+        Pattern pattern=Pattern.compile("^[A-Za-z]+$");
+        Matcher matcher=pattern.matcher(word);
+        if(matcher.matches())
+        {
+            System.out.println("Enter the character:");
+            char character=sc.next().charAt(0);
+            Pattern pattern1=Pattern.compile("^[A-Za-z]+$");
+            Matcher matcher1=pattern1.matcher(String.valueOf(character));
+            if(matcher1.matches())
+            {
+                int cn=0;
+                for(char cc:word.toCharArray())
+                {
+                    if(cc==character)
+                    {
+                        cn++;
+                    }
+                }
+                if(cn!=0)
+                {
+                    System.out.println("No of '"+character+"' present in the given word is "+cn+".");
+                }    
+                else
+                {
+                    System.out.println("The given character'"+character+"' not present in the given word.");
+                }
+                sc.close();
+            }
+            else
+            {
+                System.out.println("Given character is not an alphabet");
+            }
+        }
+        else
+        {
+            System.out.println("Not a valid string");
+        }
+    }
+}
+    
