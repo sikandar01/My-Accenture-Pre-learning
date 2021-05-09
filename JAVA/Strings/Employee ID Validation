@@ -1,0 +1,18 @@
+   import java.util.Scanner;
+class UserMain{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your ID");
+        String id=sc.next();
+        if(id.substring(0,4).equals("GBL/") && id.charAt(7)=='/')
+        {
+            if(id.substring(4,7).matches("[0-9]{3}") && id.substring(8).matches("[0-9]{4}"))
+                System.out.println("Login success.");
+        }
+        else
+        {
+            System.out.println("Incorrect ID");
+        }
+    }
+}
